@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ApiController@indexAction');
+Route::get('/CPU', 'ApiController@CPUAction');
+Route::get('/Motherboard', 'ApiController@MotherboardAction');
+Route::get('/Videocard', 'ApiController@VideocardAction');
+Route::get('/DRAM', 'ApiController@DRAMAction');
+Route::get('/PowerSupply', 'ApiController@PowerSupplyAction');
+Route::get('/Harddrive', 'ApiController@HarddriveAction');
